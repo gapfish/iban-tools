@@ -2,12 +2,11 @@ Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
   s.summary      = "IBAN validator"
   s.name         = 'iban-tools'
-  s.version      = '1.0.0'
+  s.version      = '1.1.0'
   s.authors      = ["Iulian Dogariu", "Tor Erik Linnerud"]
   s.email        = ["code@iuliandogariu.com", 'tor@alphasights.com']
   s.licenses     = ['MIT']
   s.homepage     = "https://github.com/alphasights/iban-tools"
-  s.requirements << 'none'
   s.require_path = 'lib'
   s.files        = [
     "README.md",
@@ -19,6 +18,8 @@ Gem::Specification.new do |s|
     "lib/iban-tools/rules.yml"
   ]
   s.description  = "Validates IBAN account numbers"
+
+  s.add_dependency "banking_data"
 
   s.add_development_dependency "rspec", '~> 3.1'
   s.add_development_dependency "coveralls", '~> 0.7'
