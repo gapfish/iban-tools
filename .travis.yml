@@ -8,5 +8,6 @@ rvm:
 script: bundle exec rspec spec
 gemfile:
   - gemfiles/non_BIC.gemfile
+  - gemfiles/BIC_rails_3.gemfile
   - gemfiles/BIC_rails_4.gemfile
 cache: bundler

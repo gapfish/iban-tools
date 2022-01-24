@@ -1,3 +1,5 @@
+require 'banking_data'
+
 module IBANTools
   class Conversion
 
@@ -39,7 +41,6 @@ module IBANTools
     end
 
     def self.iban2bic(country_code, bban)
-      require 'banking_data'
       local = iban2local(country_code, bban)
       country = country_code.downcase.to_sym
       blz_attribute =
@@ -56,12 +57,6 @@ module IBANTools
           first
         bic
       end
-    rescue LoadError
-      require 'logger'
-      logger = Logger.new(STDOUT)
-      logger.warn 'You have tried to convert an IBAN to BIC without ' +
-                  'installing the `banking_data` gem'
-      nil
     end
 
     private

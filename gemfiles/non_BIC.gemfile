@@ -2,6 +2,7 @@
 
 source "https://rubygems.org"
 
+gem "banking_data", github: "gapfish/banking_data"
 gem "mime-types", "~>1.0"
 
 gemspec path: "../"
