@@ -174,6 +174,13 @@ module IBANTools
           bic.should eq('BYLADEM1ERH')
         end
       end
+
+      context 'with a dutch bank account' do
+        it "returns valid BIC" do
+          bic = Conversion.iban2bic 'NL', 'INGB1234567890'
+          bic.should eq 'INGBNL2A'
+        end
+      end
     end
 
     describe '::checksum' do
