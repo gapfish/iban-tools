@@ -19,8 +19,6 @@ Gem::Specification.new do |s|
   ]
   s.description  = "Validates IBAN account numbers"
 
-  # s.add_dependency "banking_data" # from Github, see Gemfile
-
   s.add_development_dependency "rspec", '~> 3.1'
   s.add_development_dependency "coveralls", '~> 0.7'
   s.add_development_dependency "appraisal"

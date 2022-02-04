@@ -5,6 +5,6 @@ source "https://rubygems.org"
 gem "mime-types", "~>1.0"
 gem "activesupport", "~>3.2.0"
 gem "activemodel", "~>3.2.0"
-gem "banking_data", "~>0.5.0"
+gem "banking_data", github: "gapfish/banking_data"
 
 gemspec path: "../"
