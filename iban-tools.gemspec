@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.platform     = Gem::Platform::RUBY
   s.summary      = "IBAN validator"
   s.name         = 'iban-tools'
-  s.version      = '1.1.0'
+  s.version      = '1.1.1'
   s.authors      = ["Iulian Dogariu", "Tor Erik Linnerud"]
   s.email        = ["code@iuliandogariu.com", 'tor@alphasights.com']
   s.licenses     = ['MIT']
@@ -19,9 +19,7 @@ Gem::Specification.new do |s|
   ]
   s.description  = "Validates IBAN account numbers"
 
-  # s.add_dependency "banking_data" # from Github, see Gemfile
-
   s.add_development_dependency "rspec", '~> 3.1'
   s.add_development_dependency "coveralls", '~> 0.7'
-  s.add_development_dependency "appraisal"
+  s.add_development_dependency "appraisal" # further dependencies in Appraisals
 end

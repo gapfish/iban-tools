@@ -1,0 +1,24 @@
+name: test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+
+      - name: Set up gemfiles
+        run: bundle exec appraisal
+
+      - name: Run specs
+        run: |
+          for gemfile in gemfiles/non_BIC.gemfile gemfiles/BIC_rails_3.gemfile gemfiles/BIC_rails_4.gemfile
+            do BUNDLE_GEMFILE=$gemfile bundle install
+              BUNDLE_GEMFILE=$gemfile bundle exec rspec spec
+            done
